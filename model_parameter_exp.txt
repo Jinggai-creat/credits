@@ -1,0 +1,63 @@
+ExP#1: epochs=1
+    model = keras.models.Sequential([
+        keras.layers.Dense(30, name="l1"),
+        keras.layers.Dense(30, activation='relu', name="l2"),
+        keras.layers.Dropout(0.2),
+        keras.layers.Dense(2, activation='softmax', name="l3")
+    ])
+
+    model.compile(optimizer='adam',
+                  loss='sparse_categorical_crossentropy',
+                  metrics=['accuracy'])
+
+Result: Test accuracy: 0.99824458360672
+Log: training_exp1_log
+
+
+
+Exp#2: epochs=1
+    model = keras.models.Sequential([
+        keras.layers.Dense(30, name="l1"),
+        keras.layers.Dense(15, activation='relu', name="l2"),
+        keras.layers.Dropout(0.2),
+        keras.layers.Dense(2, activation='softmax', name="l3")
+    ])
+
+    model.compile(optimizer='adam',
+                  loss='sparse_categorical_crossentropy',
+                  metrics=['accuracy'])
+
+Result: Test accuracy: 0.9979414343833923
+Log: training_exp2_log
+
+Exp#3: epochs=1
+    model = keras.models.Sequential([
+        keras.layers.Dense(30, name="l1"),
+        keras.layers.Dense(8, activation='relu', name="l2"),
+        keras.layers.Dropout(0.2),
+        keras.layers.Dense(2, activation='softmax', name="l3")
+    ])
+
+    model.compile(optimizer='adam',
+                  loss='sparse_categorical_crossentropy',
+                  metrics=['accuracy'])
+
+Result: Test accuracy: 0.998032808303833
+Log: training_exp3_log
+
+
+Exp#4: epochs=1
+    model = keras.models.Sequential([
+        keras.layers.Dense(30, name="l1"),
+        keras.layers.Dense(4, activation='relu', name="l2"),
+        keras.layers.Dropout(0.2),
+        keras.layers.Dense(2, activation='softmax', name="l3")
+    ])
+
+    model.compile(optimizer='adam',
+                  loss='sparse_categorical_crossentropy',
+                  metrics=['accuracy'])
+
+
+Result: Test accuracy: 0.9942737302780151
+Log: training_exp4_log
